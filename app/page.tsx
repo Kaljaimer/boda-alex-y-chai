@@ -184,7 +184,7 @@ export default function WeddingInvitation() {
                   <Calendar className="w-6 h-6 text-[#886d3a] mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-[#886d3a] mb-1">Fecha:</p>
-                    <p className="text-2xl text-[#bf9f5c]">17 de octubre del 2026</p>
+                    <p className="text-xl text-[#886d3a]">17 de octubre del 2026</p>
                   </div>
                 </div>
 
@@ -192,7 +192,7 @@ export default function WeddingInvitation() {
                   <Clock className="w-6 h-6 text-[#886d3a] mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-[#886d3a] mb-1">Hora:</p>
-                    <p className="text-2xl text-[#bf9f5c]">12:00</p>
+                    <p className="text-xl text-[#886d3a]">12:00</p>
                   </div>
                 </div>
 
@@ -200,7 +200,7 @@ export default function WeddingInvitation() {
                   <MapPin className="w-6 h-6 text-[#886d3a] mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-[#886d3a] mb-1">Lugar:</p>
-                    <p className="text-2xl text-[#bf9f5c]">Finca Casa Rafael</p>
+                    <p className="text-xl text-[#886d3a]">Finca Casa Rafael</p>
                   </div>
                 </div>
               </div>
@@ -266,7 +266,7 @@ export default function WeddingInvitation() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-[#886d3a] mb-8 text-center">Localización</h2>
 
-          <Card className="overflow-hidden border-2 border-[#dfcfae] shadow-2xl pt-0">
+          <Card className="overflow-hidden border-2 border-[#dfcfae] shadow-2xl pt-0 pb-0">
             <CardContent className="p-0">
               <div className="aspect-video bg-rose-50 w-full">
                 <iframe
