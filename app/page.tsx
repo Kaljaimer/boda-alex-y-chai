@@ -170,7 +170,7 @@ export default function WeddingInvitation() {
       {/* Event Section */}
       <section className="py-20 px-4 bg-gradient-to-b ">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-[#886d3a] mb-16 text-center">Evento</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-[#886d3a] mb-8 text-center">Evento</h2>
 
           <Card className="relative overflow-hidden border-2 border-[#dfcfae] shadow-2xl">
               <div
@@ -179,14 +179,12 @@ export default function WeddingInvitation() {
                   aria-hidden="true"
               />
             <CardContent className="relative p-8 md:p-12">
-              <h3 className="text-3xl font-serif text-[#886d3a] mb-8 text-center">Ceremonia</h3>
-
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <Calendar className="w-6 h-6 text-[#886d3a] mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-[#886d3a] mb-1">Fecha:</p>
-                    <p className="text-xl text-[#bf9f5c]">17 de octubre del 2026</p>
+                    <p className="text-2xl text-[#bf9f5c]">17 de octubre del 2026</p>
                   </div>
                 </div>
 
@@ -194,7 +192,7 @@ export default function WeddingInvitation() {
                   <Clock className="w-6 h-6 text-[#886d3a] mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-[#886d3a] mb-1">Hora:</p>
-                    <p className="text-xl text-[#bf9f5c]">12:00</p>
+                    <p className="text-2xl text-[#bf9f5c]">12:00</p>
                   </div>
                 </div>
 
@@ -202,7 +200,7 @@ export default function WeddingInvitation() {
                   <MapPin className="w-6 h-6 text-[#886d3a] mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-[#886d3a] mb-1">Lugar:</p>
-                    <p className="text-xl text-[#bf9f5c]">Finca Casa Rafael</p>
+                    <p className="text-2xl text-[#bf9f5c]">Finca Casa Rafael</p>
                   </div>
                 </div>
               </div>
@@ -231,12 +229,12 @@ export default function WeddingInvitation() {
             Tu respuesta nos ayudará a planificar mejor nuestro gran día
           </p>
 
-          <Card className="border-2 border-[#dfcfae] shadow-xl">
-            <CardContent className="pr-12 pl-12 bg-white/80 backdrop-blur-sm">
+          <Card className="border-2 border-[#dfcfae] shadow-xl pl-0 pr-0">
+            <CardContent className="bg-white/80 backdrop-blur-sm pl-0 pr-0">
               {(
                 <div className="space-y-6">
                   <p className="text-center text-[#886d3a] mb-4">Por favor, completa tu información:</p>
-                  <div className="aspect-video bg-rose-50 rounded-lg flex items-center justify-center border-2 border-dashed border-[#dfcfae]">
+                  <div className="aspect-video bg-rose-50 rounded-lg flex items-center justify-center border-2 border-[#dfcfae]">
                       <iframe
                           src="https://docs.google.com/forms/d/e/1FAIpQLSdf1Xse9r7wQFRM8gzHMeE_cNbgSDNYV6mr1Ypv-6vjK_8pRw/viewform?usp=dialog"
                           width="100%"
@@ -266,7 +264,7 @@ export default function WeddingInvitation() {
       {/* Location Section */}
       <section className="py-20 px-4 bg-gradient-to-b ">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-[#886d3a] mb-16 text-center">Localización</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-[#886d3a] mb-8 text-center">Localización</h2>
 
           <Card className="overflow-hidden border-2 border-[#dfcfae] shadow-2xl pt-0">
             <CardContent className="p-0">
