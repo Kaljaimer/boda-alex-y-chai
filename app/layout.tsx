@@ -10,19 +10,21 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             {
-                url: "/icon-light-32x32.png",
+                // Should be 32px by 32px
+                url: "/logoBodaNoBG.png",
                 media: "(prefers-color-scheme: light)",
             },
             {
-                url: "/icon-dark-32x32.png",
+                // Should be 32px by 32px
+                url: "/logoBodaNoBG.png",
                 media: "(prefers-color-scheme: dark)",
             },
             {
-                url: "/icon.svg",
+                url: "/logoBodaNoBG.png",
                 type: "image/svg+xml",
             },
         ],
-        apple: "/apple-icon.png",
+        apple: "/logoBodaNoBG.png",
     },
 }
 

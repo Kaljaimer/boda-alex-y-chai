@@ -96,3 +96,14 @@ body {
         @apply bg-background text-foreground;
     }
 }
+
+.bg-desert-sand {
+    background: linear-gradient(
+            to bottom,
+            #f8e4b2 0%,
+            #f3d9a4 25%,
+            #e9c891 50%,
+            #e2b97a 75%,
+            #d6a55d 100%
+    );
+}

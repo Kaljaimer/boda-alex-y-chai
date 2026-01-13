@@ -43,13 +43,15 @@ export default function WeddingInvitation() {
         )
     }
   return (
-    <div className="min-h-screen bg-gradient-to-b ">
+    <div className="min-h-screen bg-cover bg-center bg-fixed"
+         style={{ backgroundImage: "url('/bgWeb.png')"}}
+    >
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 py-12 text-center">
         <h1 className="text-4xl md:text-6xl font-serif text-[#886d3a] mb-8 text-balance">Estás invitado a la boda de</h1>
         <div className="relative mb-12">
             <img
-                src="/logoBoda1.png"
+                src="/logoBodaNoBG.png"
                 alt="Logo Boda Alex y Chai"
             />
         </div>
@@ -60,7 +62,7 @@ export default function WeddingInvitation() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-4 backdrop-blur-sm">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-[#886d3a] mb-6 text-center text-balance">
             Nuestra <span className="italic">historia</span>
@@ -219,7 +221,7 @@ export default function WeddingInvitation() {
       </section>
 
       {/* RSVP Section */}
-      <section className="py-20 px-4 backdrop-blur-sm">
+      <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-[#886d3a] mb-6 text-center">Confirmación</h2>
           <p className="text-xl text-[#886d3a] text-center mb-4">
