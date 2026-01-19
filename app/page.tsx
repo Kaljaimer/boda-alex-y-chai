@@ -75,12 +75,16 @@ export default function WeddingInvitation() {
             <SectionFromLeft>
                 <div className="mb-16 grid md:grid-cols-2 gap-8 items-center">
                     <div className="order-2 md:order-1">
-                        <img src="/romantic-first-date-couple-at-bar.jpg" alt="El Comienzo" className="w-full h-auto rounded-lg shadow-xl" />
+                        <img src="/1.jpeg" alt="El Comienzo" className="w-full h-auto rounded-lg shadow-xl" />
                     </div>
                     <div className="order-1 md:order-2">
                         <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo I: El Comienzo</h3>
                         <p className="text-[#bf9f5c] leading-relaxed">
-                            Añadir texto aqui.
+                            Uno de Almería, otro de Casablanca, conocernos era algo improbable de no ser por el destino.
+                            Entre mensajes, risas compartidas y la magia de nuestras películas
+                            favoritas de Marvel, comenzó a tejerse una preciosa historia. Dos frikis que, con el paso del tiempo,
+                            hemos vivido tantas aventuras juntos... que sin darnos cuenta, nos enamoramos no solo de cada
+                            historia, sino aún más el uno del otro.
                         </p>
                     </div>
                 </div>
@@ -91,14 +95,18 @@ export default function WeddingInvitation() {
             <SectionFromRight>
                 <div className="mb-16 grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo II: Nuestra Primera Decisión</h3>
+                        <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo II: La pregunta</h3>
                         <p className="text-[#bf9f5c] leading-relaxed">
-                            Añadir texto aqui.
+                            Tras años de amor, complicidad y sueños compartidos, sentimos que llegó el momento de dar
+                            un paso más. Entre las murallas de un castillo cargado de historia, nos hicimos ver lo
+                            importantes que éramos el uno para el otro, dando pié a la gran pregunta.
+                            En ese instante, el tiempo pareció detenerse, y con un simple “sí”, sellamos una promesa
+                            de amor eterno.
                         </p>
                     </div>
                     <div>
                         <img
-                            src="/happy-couple-making-decision-together.jpg"
+                            src="/2.jpeg"
                             alt="Primera Decisión"
                             className="w-full h-auto rounded-lg shadow-xl"
                         />
@@ -112,7 +120,7 @@ export default function WeddingInvitation() {
                 <div className="mb-16 grid md:grid-cols-2 gap-8 items-center">
                     <div className="order-2 md:order-1">
                         <img
-                            src="/couple-moving-into-first-home-together.jpg"
+                            src="/3.jpeg"
                             alt="Nuestro Hogar"
                             className="w-full h-auto rounded-lg shadow-xl"
                         />
@@ -120,7 +128,11 @@ export default function WeddingInvitation() {
                     <div className="order-1 md:order-2">
                         <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo III: Nuestro Hogar</h3>
                         <p className="text-[#bf9f5c] leading-relaxed">
-                            Añadir texto aqui.
+                            Juntos encontramos un lugar que pronto se convirtió en nuestro refugio. Amueblamos cada
+                            rincón a nuestro gusto, con cuidado y cariño, y llenamos el espacio con toques de nuestras
+                            dos culturas, la marroquí y la española. Cada detalle, cada color, cada recuerdo refleja
+                            quiénes somos y todo lo que hemos construido juntos. Allí no solo levantamos paredes,
+                            sino un hogar lleno de vida, amor y complicidad.
                         </p>
                     </div>
                 </div>
@@ -133,12 +145,16 @@ export default function WeddingInvitation() {
                     <div>
                         <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo IV: Crecer Juntos</h3>
                         <p className="text-[#bf9f5c] leading-relaxed">
-                            Añadir texto aqui.
+                            Aprendinmos a caminar de la mano, a descubrir y respetar la cultura del otro, y a
+                            celebrarla con entusiasmo. Viajando, descubrieron nuevos mundos,
+                            nuevas experiencias y nuevas formas de amarnos. Cada tradición, cada aventura y cada
+                            recuerdo compartido fortaleció nuestro vínculo, demostrando que nuestras diferencias nos
+                            unen y hacen nuestro amor más profundo cada día.
                         </p>
                     </div>
                     <div>
                         <img
-                            src="/couple-celebrating-christmas-together-at-home.jpg"
+                            src="/4.jpeg"
                             alt="Creciendo Juntos"
                             className="w-full h-auto rounded-lg shadow-xl"
                         />
@@ -152,7 +168,7 @@ export default function WeddingInvitation() {
                 <div className="mb-16 grid md:grid-cols-2 gap-8 items-center">
                     <div className="order-2 md:order-1">
                         <img
-                            src="/couple-celebrating-new-year-together.jpg"
+                            src="/5.jpeg"
                             alt="Nuestro Futuro"
                             className="w-full h-auto rounded-lg shadow-xl"
                         />
@@ -160,7 +176,9 @@ export default function WeddingInvitation() {
                     <div className="order-1 md:order-2">
                         <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo V: El Siguiente Paso</h3>
                         <p className="text-[#bf9f5c] leading-relaxed">
-                            Añadir texto aqui.
+                            Hoy, con el corazón lleno de amor y una historia justos aún por escribir, damos el siguiente
+                            paso. Queremos celebrar nuestra unión rodeados de quienes han sido testigos de nuestro
+                            viaje y de quienes serán parte de este nuevo capítulo: el comienzo de nuestra vida juntos.
                         </p>
                     </div>
                 </div>
