@@ -28,7 +28,9 @@ export default function WeddingInvitation() {
         }, 0)
 
         if (showIntroVideo) {
+            document.body.style.touchAction = "none"
             document.body.style.overflow = "hidden"
+            document.documentElement.style.touchAction = "none"
             document.documentElement.style.overflow = "hidden"
         } else {
             setTimeout(() => {
