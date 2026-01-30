@@ -11,6 +11,7 @@ export default function WeddingInvitation() {
     const [showIntroVideo, setShowIntroVideo] = useState(true)
     const videoRef = useRef<HTMLVideoElement>(null)
     const [showPlayButton, setShowPlayButton] = useState(false)
+    const [videoSrc, setVideoSrc] = useState("/intro-video.mp4")
 
     useEffect(() => {
         if (videoRef.current) {
@@ -18,6 +19,11 @@ export default function WeddingInvitation() {
                 setShowPlayButton(true)
             })
         }
+    }, [])
+
+    useEffect(() => {
+        const isMobile = /iPhone|Android|iPad|iPod|Mobile/i.test(window.navigator.userAgent)
+        setVideoSrc(isMobile ? "/intro-video-phone.mp4" : "/intro-video.mp4")
     }, [])
 
     const handlePlay = () => {
@@ -69,7 +75,7 @@ export default function WeddingInvitation() {
                     playsInline
                     onEnded={() => setShowIntroVideo(false)}
                 >
-                    <source src="/intro-video.mp4" type="video/mp4" />
+                    <source src={videoSrc} type="video/mp4" />
                     {/*<source src="/test2.webm" type="video/webm" />*/}
                     Your browser does not support the video tag.
                 </video>
