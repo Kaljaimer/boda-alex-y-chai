@@ -78,10 +78,10 @@ export default function WeddingInvitation() {
          style={{ backgroundImage: "url('/bgWeb.png')"}}
     >
         {showIntroVideo && (
-            <div className="fixed inset-0 z-50 bg-black overflow-hidden">
+            <div className="fixed inset-0 z-50 bg-black overflow-hidden h-screen w-screen">
                 <video
                     ref={videoRef}
-                    className="absolute inset-0 w-full h-full object-contain bg-black"
+                    className="absolute inset-0 w-full h-full object-cover bg-black"
                     autoPlay
                     playsInline
                     onEnded={() => setShowIntroVideo(false)}

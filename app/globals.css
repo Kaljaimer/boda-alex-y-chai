@@ -107,3 +107,11 @@ body {
             #d6a55d 100%
     );
 }
+
+html, body {
+    overscroll-behavior: none;
+    touch-action: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
