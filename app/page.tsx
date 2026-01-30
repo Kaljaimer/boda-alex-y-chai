@@ -14,16 +14,18 @@ export default function WeddingInvitation() {
     const [videoSrc, setVideoSrc] = useState("/intro-video.mp4")
 
     useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.play().catch(() => {
-                setShowPlayButton(true)
-            })
-        }
-    }, [])
-
-    useEffect(() => {
         const isMobile = /iPhone|Android|iPad|iPod|Mobile/i.test(window.navigator.userAgent)
-        setVideoSrc(isMobile ? "/intro-video-phone.mp4" : "/intro-video.mp4")
+        const src = isMobile ? "/intro-video-phone.mp4" : "/intro-video.mp4"
+        setVideoSrc(src)
+
+        setTimeout(() => {
+            if (videoRef.current) {
+                videoRef.current.load()
+                videoRef.current.play().catch(() => {
+                    setShowPlayButton(true)
+                })
+            }
+        }, 0)
     }, [])
 
     const handlePlay = () => {
@@ -67,26 +69,27 @@ export default function WeddingInvitation() {
          style={{ backgroundImage: "url('/bgWeb.png')"}}
     >
         {showIntroVideo && (
-            <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
-                <video
-                    ref={videoRef}
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    playsInline
-                    onEnded={() => setShowIntroVideo(false)}
-                >
-                    <source src={videoSrc} type="video/mp4" />
-                    {/*<source src="/test2.webm" type="video/webm" />*/}
-                    Your browser does not support the video tag.
-                </video>
-                {showPlayButton && (
-                    <button
-                        onClick={handlePlay}
-                        className="absolute z-60 px-8 py-4 bg-[#886d3a] text-white rounded-lg text-xl"
+            <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center">
+                <div className="relative flex flex-col items-center justify-center w-full h-full">
+                    <video
+                        ref={videoRef}
+                        className="max-w-full max-h-full object-contain"
+                        autoPlay
+                        playsInline
+                        onEnded={() => setShowIntroVideo(false)}
                     >
-                        Reproducir con sonido
-                    </button>
-                )}
+                        <source src={videoSrc} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    {showPlayButton && (
+                        <button
+                            onClick={handlePlay}
+                            className="mt-8 px-8 py-4 bg-[#886d3a] text-white rounded-lg text-xl"
+                        >
+                            Reproducir con sonido
+                        </button>
+                    )}
+                </div>
             </div>
         )}
 
