@@ -26,7 +26,16 @@ export default function WeddingInvitation() {
                 })
             }
         }, 0)
-    }, [])
+
+        if (showIntroVideo) {
+            document.body.classList.add("overflow-hidden")
+        } else {
+            document.body.classList.remove("overflow-hidden")
+        }
+        return () => {
+            document.body.classList.remove("overflow-hidden")
+        }
+    }, [showIntroVideo])
 
     const handlePlay = () => {
         videoRef.current?.play()
@@ -69,27 +78,25 @@ export default function WeddingInvitation() {
          style={{ backgroundImage: "url('/bgWeb.png')"}}
     >
         {showIntroVideo && (
-            <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center">
-                <div className="relative flex flex-col items-center justify-center w-full h-full">
-                    <video
-                        ref={videoRef}
-                        className="max-w-full max-h-full object-contain"
-                        autoPlay
-                        playsInline
-                        onEnded={() => setShowIntroVideo(false)}
+            <div className="fixed inset-0 z-50 bg-black overflow-hidden">
+                <video
+                    ref={videoRef}
+                    className="absolute inset-0 w-full h-full object-contain bg-black"
+                    autoPlay
+                    playsInline
+                    onEnded={() => setShowIntroVideo(false)}
+                >
+                    <source src={videoSrc} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                {showPlayButton && (
+                    <button
+                        onClick={handlePlay}
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 px-8 py-4 bg-[#886d3a] text-white rounded-lg text-xl z-60"
                     >
-                        <source src={videoSrc} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    {showPlayButton && (
-                        <button
-                            onClick={handlePlay}
-                            className="mt-8 px-8 py-4 bg-[#886d3a] text-white rounded-lg text-xl"
-                        >
-                            Reproducir con sonido
-                        </button>
-                    )}
-                </div>
+                        Reproducir con sonido
+                    </button>
+                )}
             </div>
         )}
 
