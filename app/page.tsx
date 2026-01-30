@@ -1,15 +1,29 @@
 "use client"
-
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, MapPin, Calendar, Clock } from "lucide-react"
 import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
 import {LogoBoda} from "@/app/LogoBoda";
 
 export default function WeddingInvitation() {
   const [showForm, setShowForm] = useState(true)
+    const [showIntroVideo, setShowIntroVideo] = useState(true)
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const [showPlayButton, setShowPlayButton] = useState(false)
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.play().catch(() => {
+                setShowPlayButton(true)
+            })
+        }
+    }, [])
+
+    const handlePlay = () => {
+        videoRef.current?.play()
+        setShowPlayButton(false)
+    }
 
     const SectionFromLeft = ({ children }: { children: React.ReactNode }) => {
         const ref = useRef(null)
@@ -46,6 +60,30 @@ export default function WeddingInvitation() {
     <div className="min-h-screen bg-cover bg-center bg-fixed"
          style={{ backgroundImage: "url('/bgWeb.png')"}}
     >
+        {showIntroVideo && (
+            <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
+                <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    playsInline
+                    onEnded={() => setShowIntroVideo(false)}
+                >
+                    <source src="/intro-video.mp4" type="video/mp4" />
+                    {/*<source src="/test2.webm" type="video/webm" />*/}
+                    Your browser does not support the video tag.
+                </video>
+                {showPlayButton && (
+                    <button
+                        onClick={handlePlay}
+                        className="absolute z-60 px-8 py-4 bg-[#886d3a] text-white rounded-lg text-xl"
+                    >
+                        Reproducir con sonido
+                    </button>
+                )}
+            </div>
+        )}
+
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 py-12 text-center">
         <h1 className="text-4xl md:text-6xl font-serif text-[#886d3a] mb-8 text-balance">Estás invitado a la boda de</h1>
@@ -75,7 +113,7 @@ export default function WeddingInvitation() {
             <SectionFromLeft>
                 <div className="mb-16 grid md:grid-cols-2 gap-8 items-center">
                     <div className="order-2 md:order-1">
-                        <img src="/1.jpeg" alt="El Comienzo" className="w-full h-auto rounded-lg shadow-xl" />
+                        <img src="/1.jpg" alt="El Comienzo" className="w-full h-auto rounded-lg shadow-xl" />
                     </div>
                     <div className="order-1 md:order-2">
                         <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo I: El Comienzo</h3>
@@ -145,8 +183,8 @@ export default function WeddingInvitation() {
                     <div>
                         <h3 className="text-2xl font-serif text-[#886d3a] mb-4">Capítulo IV: Crecer Juntos</h3>
                         <p className="text-[#bf9f5c] leading-relaxed">
-                            Aprendinmos a caminar de la mano, a descubrir y respetar la cultura del otro, y a
-                            celebrarla con entusiasmo. Viajando, descubrieron nuevos mundos,
+                            Aprendimos a caminar de la mano, a descubrir y respetar la cultura del otro, y a
+                            celebrarla con entusiasmo. Viajando, descubrimos nuevos mundos,
                             nuevas experiencias y nuevas formas de amarnos. Cada tradición, cada aventura y cada
                             recuerdo compartido fortaleció nuestro vínculo, demostrando que nuestras diferencias nos
                             unen y hacen nuestro amor más profundo cada día.
