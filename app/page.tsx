@@ -28,12 +28,15 @@ export default function WeddingInvitation() {
         }, 0)
 
         if (showIntroVideo) {
-            document.body.classList.add("overflow-hidden")
+            document.body.style.overflow = "hidden"
+            document.documentElement.style.overflow = "hidden"
         } else {
-            document.body.classList.remove("overflow-hidden")
+            document.body.style.overflow = ""
+            document.documentElement.style.overflow = ""
         }
         return () => {
-            document.body.classList.remove("overflow-hidden")
+            document.body.style.overflow = ""
+            document.documentElement.style.overflow = ""
         }
     }, [showIntroVideo])
 
