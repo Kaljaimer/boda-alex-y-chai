@@ -28,22 +28,16 @@ export default function WeddingInvitation() {
         }, 0)
 
         if (showIntroVideo) {
-            document.body.style.touchAction = "none"
             document.body.style.overflow = "hidden"
-            document.documentElement.style.touchAction = "none"
             document.documentElement.style.overflow = "hidden"
         } else {
             setTimeout(() => {
-                document.body.style.touchAction = "manipulation!important"
                 document.body.style.overflow = "auto"
-                document.documentElement.style.touchAction = "manipulation!important"
                 document.documentElement.style.overflow = "auto"
             }, 100)
         }
         return () => {
-            document.body.style.touchAction = "manipulation!important"
             document.body.style.overflow = "auto"
-            document.documentElement.style.touchAction = "manipulation!important"
             document.documentElement.style.overflow = "auto"
         }
     }, [showIntroVideo])
